@@ -1,85 +1,105 @@
-# RTL-to-GDSII Implementation of 4-bit ALU using Cadence
+# 4-bit ALU RTL-to-GDSII Implementation (Cadence)
 
-## 🚀 Overview
+## Overview
 
-This project demonstrates a complete ASIC design flow from RTL to GDSII for a 4-bit Arithmetic Logic Unit (ALU) using industry-standard Cadence tools.
+This project implements a 4-bit Arithmetic Logic Unit (ALU) and takes it through the complete ASIC design flow — from Verilog RTL all the way to a final GDSII layout.
 
-The design is implemented using Verilog and goes through full physical design, resulting in a fabrication-ready GDSII layout.
-
----
-
-## 🛠️ Tools Used
-
-* Cadence Genus (Synthesis)
-* Cadence Innovus (Physical Design)
-* Cadence Xcelium (Simulation)
-* Linux Environment
+The goal was to understand how a digital design moves from code to physical silicon using industry tools like Cadence Genus and Innovus.
 
 ---
 
-## 🔄 Design Flow
+## Tools Used
 
-RTL → Simulation → Synthesis → Gate-Level Simulation → Floorplanning → Placement → Routing → DRC → GDSII
-
----
-
-## ⚙️ Features
-
-* 4-bit ALU design
-* Supports operations:
-
-  * Addition
-  * Subtraction
-  * AND
-  * OR
-  * XOR
-* Carry/borrow output
-* Fully verified through RTL and Gate-Level Simulation
+* Cadence Genus – synthesis
+* Cadence Innovus – physical design
+* Cadence Xcelium – simulation
+* Linux (RHEL/CentOS)
 
 ---
 
-## 📊 Results
+## Design Flow
 
-* ✅ 100% Routing Completion
-* ✅ 0 DRC Violations
-* ✅ Functional correctness verified
+RTL → Simulation → Synthesis → Gate-Level Simulation → Floorplan → Placement → Routing → DRC → GDSII
 
 ---
 
-## 📁 Project Structure
+## ALU Functionality
+
+The ALU is a combinational design supporting:
+
+* Addition
+* Subtraction
+* AND
+* OR
+* XOR
+
+It also generates a carry/borrow output for arithmetic operations.
+
+---
+
+## Results
+
+* Routing completed successfully
+* No DRC violations
+* RTL and gate-level simulations matched
+
+---
+
+## Project Structure
 
 ```
-rtl/           → Verilog RTL code  
-tb/            → Testbench  
-constraints/   → Timing constraints (SDC)  
-synthesis/     → Netlist & reports  
-gds/           → Final GDSII file  
-docs/          → Project report  
+rtl/           Verilog design  
+tb/            Testbench  
+constraints/   SDC file  
+synthesis/     Netlist + reports  
+gds/           Final layout  
+docs/          Full report  
+images/        Screenshots  
 ```
 
 ---
 
-## 📷 Outputs (to be added)
+## Results & Screenshots
 
-* RTL Simulation Waveform
-* Gate-Level Simulation
-* Placement View
-* Routing View
-* Final GDS Layout
+### RTL Simulation
+
+![RTL](images/rtl_waveform.png)
+
+### Gate-Level Simulation
+
+![GLS](images/gls_waveform.png)
+
+### Placement (Innovus)
+
+![Placement](images/placement.png)
+
+### Routing
+
+![Routing](images/routing.png)
+
+### Final GDS Layout
+
+![GDS](images/gds_layout.png)
 
 ---
 
-## 📄 Report
+## Report
 
-Detailed report available in:
-
-```
+Full project report:
 docs/report.pdf
-```
 
 ---
 
-## 👨‍💻 Author
+## What I Learned
+
+* Complete RTL to GDSII flow
+* Using Cadence tools for synthesis and P&R
+* Debugging synthesis and simulation issues
+* Understanding physical design stages
+
+---
+
+## Author
 
 Siam Al Shafin
-VLSI Engineering Student
+
