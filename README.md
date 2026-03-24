@@ -1,5 +1,5 @@
 # 4-bit ALU RTL-to-GDSII Implementation (Cadence)
-
+> Complete RTL-to-GDSII ASIC implementation using Cadence Genus & Innovus with successful routing and zero DRC violations.
 ## Overview
 
 This project implements a 4-bit Arithmetic Logic Unit (ALU) and takes it through the complete ASIC design flow — from Verilog RTL all the way to a final GDSII layout.
